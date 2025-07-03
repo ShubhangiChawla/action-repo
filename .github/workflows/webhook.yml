@@ -1,0 +1,13 @@
+name: Trigger Webhook Events
+
+on:
+  push:
+  pull_request:
+    types: [opened, closed]
+
+jobs:
+  notify-webhook:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Simple event trigger
+        run: echo "Webhook triggered"
